@@ -21,19 +21,19 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE Text Editor'
+        title: 'Jate Text Editor'
       }),
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: 'service-worker.js',
       }),
 
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
-        short_name: 'JATE',
+        short_name: 'Jate',
         description: 'A Text editor that you can edit and make changes offline.',
         background_color: '#225ca3',
         theme_color: '#225ca3',
